@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web3 MetaMask App</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 350px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .connect {
+      background: #4CAF50;
+      color: white;
+    }
+
+    .connect:hover {
+      background: #45a049;
+    }
+
+    .send {
+      background: #ff9800;
+      color: white;
+    }
+
+    .send:hover {
+      background: #e68900;
+    }
+
+    .account-box {
+      margin-top: 15px;
+      padding: 10px;
+      background: #f1f1f1;
+      border-radius: 8px;
+      font-size: 12px;
+      word-break: break-all;
+    }
+
+    .status {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .connected {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>🚀 Web3 Wallet</h2>
+
+  <button class="connect" onclick="connectWallet()">Connect Wallet</button>
+
+  <div id="account" class="account-box">
+    Not Connected
+  </div>
+
+  <div id="status" class="status">
+    Status: Disconnected
+  </div>
+
+  <button class="send" onclick="sendTransaction()">Send Transaction</button>
+</div>
+
+<!-- ethers CDN -->
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+
+<!-- your JS -->
+<script src="app.js"></script>
+
+</body>
+</html>

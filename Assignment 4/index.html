@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IPFS File Upload</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h1>IPFS File Upload</h1>
+
+  <div class="upload-box" id="dropArea">
+    <p>Drag & Drop File Here</p>
+    <span>or</span>
+    <input type="file" id="fileInput" hidden>
+    <button onclick="selectFile()">Choose File</button>
+  </div>
+
+  <p id="fileName" class="file-name"></p>
+
+  <button id="uploadBtn" class="upload-btn" onclick="uploadFile()">
+    Upload to IPFS
+  </button>
+
+  <div id="result" class="result hidden">
+    <p><strong>CID</strong></p>
+    <textarea id="cid" readonly></textarea>
+
+    <div class="actions">
+      <button onclick="copyCID()">Copy CID</button>
+      <a id="viewLink" target="_blank" class="view-btn">Open File</a>
+    </div>
+  </div>
+
+  <p id="status"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
